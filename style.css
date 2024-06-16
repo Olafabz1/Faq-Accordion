@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+  --white: hsl(0, 0%, 100%);
+  --Lightpink: hsl(275, 100%, 97%);
+  --Grayishpurple: hsl(292, 16%, 49%);
+  --Darkpurple: hsl(292, 42%, 14%);
+}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+body{
+  width:100vw;
+  height:100vh;
+  background-image:url(./assets/images/background-pattern-desktop.svg);
+  background-repeat:no-repeat;
+  background-size:cover;
+  position:relative;
+}
+.accordion{
+  width:100%;
+  height:50vh;
+  background-color:var(--Lightpink);
+  position:absolute;
+  bottom:1px;
+}
+.maincard{
+  width:400px;
+  height:250px;
+  background-color:var(--white);
+  border-radius:8px;
+  position:absolute;
+  top:30%;
+  left:35%; 
+  z-index:1;
+  padding:20px;
+}
+.faq{
+  width:85px;
+  display:flex;
+  justify-content:space-between;
+}
+.faq img{
+  width:20px;
+}
+.faq h2{
+  font-family:"Work Sans",
+    sans-serif;
+  color:var(--Darkpurple);
+}
+.main{
+  width:360px;
+  
+}
+.main.active .offer {
+  height:50px;
+  font-family: "Work Sans", sans-serif;
+  font-size:10px;
+}
+.main.active img {
+  content:url(./assets/images/icon-minus.svg);
+}
+
+.dropdown{
+  display:flex;
+  justify-content: space-between;
+}
+.dropdown h6{
+  margin-top:10px;
+  font-size:10px;
+  font-family:"Work Sans",sans-serif;
+}
+.dropdown h6:hover {
+  color:var(--Grayishpurple);
+}
+.dropdown img{
+  cursor: pointer;
+}
+.offer{
+  position: relative;
+  height:0;
+  overflow: hidden;
+  transition:0.5s;
+  overflow-y:auto;
+} 
+
+/* media screen*/
+
+@media screen and (max-width:740px){
+  .maincard{
+  position:absolute;
+  top:30%;
+  left:20%;  
+}
+}
+@media screen and (max-width:490px) {
+ .accordion{
+  width:460px;  
+}
+.maincard{
+  position:absolute;
+  top:30%;
+  left:5%;
+}
+}
